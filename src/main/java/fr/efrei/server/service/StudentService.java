@@ -24,4 +24,17 @@ public class StudentService {
         return studentRepository.findById(id)
                 .orElse(null);
     }
+
+    public Student createOneStudent(Student student){
+        return studentRepository.save(student);
+    }
+
+    public Student updateOneStudent(Student student){
+        return studentRepository.save(student);
+    }
+
+    public Integer deleteOneStudent(Integer id){
+        studentRepository.deleteById(id);
+        return 1;
+    }
 }
