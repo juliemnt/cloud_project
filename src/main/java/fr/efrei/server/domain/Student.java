@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 public class Student {
     //create entity Student
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequencegenerator")
-    @SequenceGenerator(name = "sequencegenerator")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "studentSequenceGenerator")
+    @SequenceGenerator(name = "studentSequenceGenerator", sequenceName = "student_sequence",allocationSize = 1)
     private Integer id;
 
     private String name;
